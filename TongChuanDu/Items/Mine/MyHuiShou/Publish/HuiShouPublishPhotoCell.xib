@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="277" id="KGk-i7-Jjw" customClass="HuiShouPublishPhotoCell">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="277"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="345" height="276.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyHuiShou_Publish_Photo" translatesAutoresizingMaskIntoConstraints="NO" id="aNC-rG-e2V">
+                        <rect key="frame" x="59" y="30" width="227" height="146.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aNC-rG-e2V" secondAttribute="height" multiplier="17:11" id="lrn-ye-guI"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfo-IK-nId">
+                        <rect key="frame" x="20" y="206.5" width="305" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="cpQ-vI-eqe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                        <state key="normal" title="确认发布" backgroundImage="APP_Public_BottomButton_BG_Icon"/>
+                        <connections>
+                            <action selector="commitButtonCLicekd:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pXw-Ee-6qI"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="Xfo-IK-nId" firstAttribute="top" secondItem="aNC-rG-e2V" secondAttribute="bottom" constant="30" id="6Te-tS-DoC"/>
+                    <constraint firstItem="aNC-rG-e2V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="NfJ-Ps-W2N"/>
+                    <constraint firstItem="aNC-rG-e2V" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="YUZ-PA-CSl"/>
+                    <constraint firstAttribute="trailing" secondItem="Xfo-IK-nId" secondAttribute="trailing" constant="20" id="iGU-WP-lbJ"/>
+                    <constraint firstItem="Xfo-IK-nId" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ive-fD-Y6p"/>
+                    <constraint firstAttribute="bottom" secondItem="Xfo-IK-nId" secondAttribute="bottom" constant="20" id="y24-Fd-xWd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="photoImageView" destination="aNC-rG-e2V" id="EFD-Qe-rdt"/>
+            </connections>
+            <point key="canvasLocation" x="46.5" y="170.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="APP_Public_BottomButton_BG_Icon" width="330" height="42"/>
+        <image name="MyHuiShou_Publish_Photo" width="249" height="156"/>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonUpLoadViewController">
+            <connections>
+                <outlet property="tableView" destination="Pf8-Mg-KKu" id="oNj-Ds-lEC"/>
+                <outlet property="uploadButton" destination="lcs-vJ-FRj" id="gZw-cY-kEL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-Mg-KKu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eJp-pd-dlL"/>
+                        <outlet property="delegate" destination="-1" id="uun-pX-DEl"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJk-r5-8cC">
+                    <rect key="frame" x="0.0" y="577" width="375" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcs-vJ-FRj">
+                            <rect key="frame" x="20" y="20" width="335" height="50"/>
+                            <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                            <state key="normal" title="确认上传" backgroundImage="APP_Public_BottomButton_BG_Icon"/>
+                            <connections>
+                                <action selector="upLoadButtonClicked:" destination="-1" eventType="touchUpInside" id="Wlx-za-YuB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="lcs-vJ-FRj" firstAttribute="leading" secondItem="IJk-r5-8cC" secondAttribute="leading" constant="20" id="53c-bi-twZ"/>
+                        <constraint firstAttribute="bottom" secondItem="lcs-vJ-FRj" secondAttribute="bottom" constant="20" id="GQQ-Sc-1nI"/>
+                        <constraint firstAttribute="trailing" secondItem="lcs-vJ-FRj" secondAttribute="trailing" constant="20" id="SaU-7F-quB"/>
+                        <constraint firstItem="lcs-vJ-FRj" firstAttribute="top" secondItem="IJk-r5-8cC" secondAttribute="top" constant="20" id="reJ-oY-sWb"/>
+                        <constraint firstAttribute="height" constant="90" id="wvw-74-Tma"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="IJk-r5-8cC" firstAttribute="top" secondItem="Pf8-Mg-KKu" secondAttribute="bottom" id="Elz-G9-J1s"/>
+                <constraint firstAttribute="trailing" secondItem="Pf8-Mg-KKu" secondAttribute="trailing" id="HQk-Ks-2i3"/>
+                <constraint firstAttribute="trailing" secondItem="IJk-r5-8cC" secondAttribute="trailing" id="JfF-HJ-yQD"/>
+                <constraint firstAttribute="bottom" secondItem="IJk-r5-8cC" secondAttribute="bottom" id="LaD-ZU-Ln8"/>
+                <constraint firstItem="Pf8-Mg-KKu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Uzl-Hy-Brd"/>
+                <constraint firstItem="Pf8-Mg-KKu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gYP-6J-5Ff"/>
+                <constraint firstItem="IJk-r5-8cC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m3o-RB-FX2"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="65.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="APP_Public_BottomButton_BG_Icon" width="330" height="42"/>
+    </resources>
+</document>

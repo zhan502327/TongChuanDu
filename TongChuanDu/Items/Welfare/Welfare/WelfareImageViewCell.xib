@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="128" id="KGk-i7-Jjw" customClass="WelfareImageViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="127.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvr-xG-r3l">
+                        <rect key="frame" x="0.0" y="0.0" width="363" height="127.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ung-uW-Bb0">
+                                <rect key="frame" x="20" y="10" width="323" height="107.5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ung-uW-Bb0" secondAttribute="bottom" constant="10" id="In9-JA-IQw"/>
+                            <constraint firstAttribute="trailing" secondItem="Ung-uW-Bb0" secondAttribute="trailing" constant="20" id="TtQ-fr-jKl"/>
+                            <constraint firstItem="Ung-uW-Bb0" firstAttribute="leading" secondItem="bvr-xG-r3l" secondAttribute="leading" constant="20" id="j9X-UR-Agj"/>
+                            <constraint firstItem="Ung-uW-Bb0" firstAttribute="top" secondItem="bvr-xG-r3l" secondAttribute="top" constant="10" id="tGP-qB-4sL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bvr-xG-r3l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7ck-Xm-UtG"/>
+                    <constraint firstItem="bvr-xG-r3l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Rn2-ng-AAv"/>
+                    <constraint firstAttribute="bottom" secondItem="bvr-xG-r3l" secondAttribute="bottom" id="S2n-A6-ixc"/>
+                    <constraint firstAttribute="trailing" secondItem="bvr-xG-r3l" secondAttribute="trailing" id="yc2-Sa-bZI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="welfareImageView" destination="Ung-uW-Bb0" id="O0z-YO-0QU"/>
+            </connections>
+            <point key="canvasLocation" x="55.5" y="96"/>
+        </tableViewCell>
+    </objects>
+</document>

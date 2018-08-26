@@ -1,0 +1,115 @@
+//
+//  TongChuanDu.pch
+//  TongChuanDu
+//
+//  Created by zhandb on 2018/7/9.
+//  Copyright © 2018年 zhandb. All rights reserved.
+//
+
+#ifndef TongChuanDu_pch
+#define TongChuanDu_pch
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+
+#import <UIKit/UIKit.h>
+
+#import "RTRootNavigationController.h"
+#import "MJRefresh.h"
+#import "SVProgressHUDManager.h"
+#import "Utility.h"
+#import "HttpsRequestTool.h"
+#import "PageModel.h"
+#import "AppDelegate.h"
+#import "BaseResponse.h"
+#import "UITableView+EmptyFooterView.h"
+#import "UIImageView+WebCache.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+#import "UserManager.h"
+
+
+
+//正式服务器
+static NSString *cnUrl = @"http://mayjoy.ezuan.cc/index.php?s=/Mobile";
+
+
+
+
+//设备唯一标识
+#define Device_Id [[UIDevice currentDevice].identifierForVendor UUIDString]
+
+
+//屏幕物理宽高
+#define Current_Width   [UIScreen mainScreen].bounds.size.width
+#define Current_Height [UIScreen mainScreen].bounds.size.height
+#define NavBar_Height 64
+#define TabBar_Height 49
+
+//屏幕尺寸（适配 6 和 6p 暂时不考虑 X）
+#ifndef iPhone6
+
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ?CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#endif
+
+#ifndef iPhone6P
+
+#define iPhone6P ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#endif
+
+//提示框
+#define PopDismiss        [SVProgressHUDManager popTostDismiss]
+#define PopInfo(value)    [SVProgressHUDManager popTostInfoWithString:value]
+#define PopError(value)   [SVProgressHUDManager popTostErrorWithString:value]
+#define PopLoading(value) [SVProgressHUDManager popTostLoadingWithString:value]
+#define PopSuccess(value) [SVProgressHUDManager popTostSuccessWithString:value]
+
+
+
+
+
+//全局提示语
+#define loading @"加载中"
+#define netError @"网络链接失败，请检查您的网络"
+#define dataError @"数据加载失败，请重新加载"
+
+
+
+//弱指针（仅支持调用方法时使用）
+#define WeakSelf __weak typeof(self) weakSelf = self
+
+//添加数据元素（防崩溃）
+#define ADDOBJECT(value) (value.length > 0 ? value : @"")
+
+//使用本地图片
+#define UseImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
+
+//使用十六进制颜色
+#define HexColor(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:a]
+
+
+//深色主色调
+#define DeepHexColcor HexColor(0X5EB06D)
+//浅色主色调
+#define LightHexColcor HexColor(0XBEDEC4)
+
+
+
+
+
+
+//如果release状态就不执行NSLog函数
+#ifndef __OPTIMIZE__
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+# define NSLog(...) {}
+#endif
+
+
+#endif
+
+#endif

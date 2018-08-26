@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="188" id="KGk-i7-Jjw" customClass="MineNormallCell">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="188"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="187.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RsZ-d6-TTd">
+                        <rect key="frame" x="20" y="85.5" width="17" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="VMK-EH-aaf"/>
+                            <constraint firstAttribute="width" constant="17" id="hBf-pX-Te1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXz-pa-SfO">
+                        <rect key="frame" x="47" y="84" width="281" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="daG-6j-vWi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="14"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App_Public_jiantou_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="QQI-nP-CF0">
+                        <rect key="frame" x="338" y="86.5" width="10" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="Sws-Ge-aEG"/>
+                            <constraint firstAttribute="height" constant="15" id="WSs-Ji-Gkk"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4q5-ma-YT2">
+                        <rect key="frame" x="20" y="186.5" width="348" height="0.5"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="r4J-y1-Swl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4q5-ma-YT2" secondAttribute="bottom" id="0Lg-k8-d7l"/>
+                    <constraint firstItem="QQI-nP-CF0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4hI-N3-nTb"/>
+                    <constraint firstItem="4q5-ma-YT2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="CrX-Ik-1qr"/>
+                    <constraint firstItem="RsZ-d6-TTd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="KnR-uR-JnM"/>
+                    <constraint firstItem="RsZ-d6-TTd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="RU9-tL-coq"/>
+                    <constraint firstAttribute="trailing" secondItem="4q5-ma-YT2" secondAttribute="trailing" id="Se9-pI-r3A"/>
+                    <constraint firstItem="RXz-pa-SfO" firstAttribute="leading" secondItem="RsZ-d6-TTd" secondAttribute="trailing" constant="10" id="fSd-RM-6D7"/>
+                    <constraint firstItem="QQI-nP-CF0" firstAttribute="leading" secondItem="RXz-pa-SfO" secondAttribute="trailing" constant="10" id="joK-aA-u5t"/>
+                    <constraint firstAttribute="trailing" secondItem="QQI-nP-CF0" secondAttribute="trailing" constant="20" id="wHB-rU-D6I"/>
+                    <constraint firstItem="RXz-pa-SfO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yCq-eP-tQC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="logImageView" destination="RsZ-d6-TTd" id="e7e-Si-h6v"/>
+                <outlet property="titleNameLabel" destination="RXz-pa-SfO" id="huN-nS-HWj"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="138"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="App_Public_jiantou_Icon" width="7" height="13"/>
+    </resources>
+</document>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="bgImageView" destination="M56-s3-tqP" id="Uur-0h-CEs"/>
+                <outlet property="leftImageVIewWidth" destination="Vcl-1E-Yze" id="fCd-Hz-DRi"/>
+                <outlet property="leftImageView" destination="B5X-PR-qwg" id="zIR-CQ-gGj"/>
+                <outlet property="leftImageViewHeight" destination="PVu-y2-62e" id="B66-Vr-7jF"/>
+                <outlet property="rightImageView" destination="v2E-TN-Tse" id="YQg-Of-vzM"/>
+                <outlet property="rightImageViewHeight" destination="QPs-Hg-1cO" id="08D-1b-PYC"/>
+                <outlet property="rightImageViewWidth" destination="2Lf-6G-Ukl" id="1mO-2P-chH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hB5-vB-gMO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M56-s3-tqP">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B5X-PR-qwg">
+                            <rect key="frame" x="40" y="522" width="100" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="PVu-y2-62e"/>
+                                <constraint firstAttribute="width" constant="100" id="Vcl-1E-Yze"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v2E-TN-Tse">
+                            <rect key="frame" x="235" y="522" width="100" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="2Lf-6G-Ukl"/>
+                                <constraint firstAttribute="height" constant="45" id="QPs-Hg-1cO"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="B5X-PR-qwg" secondAttribute="bottom" constant="100" id="Gn0-0K-OZP"/>
+                        <constraint firstAttribute="bottom" secondItem="M56-s3-tqP" secondAttribute="bottom" id="QrD-MJ-BrA"/>
+                        <constraint firstItem="M56-s3-tqP" firstAttribute="leading" secondItem="hB5-vB-gMO" secondAttribute="leading" id="Y8d-mj-OZs"/>
+                        <constraint firstAttribute="trailing" secondItem="v2E-TN-Tse" secondAttribute="trailing" constant="40" id="cmL-8S-ZMe"/>
+                        <constraint firstItem="M56-s3-tqP" firstAttribute="top" secondItem="hB5-vB-gMO" secondAttribute="top" id="gkl-H7-d7B"/>
+                        <constraint firstAttribute="trailing" secondItem="M56-s3-tqP" secondAttribute="trailing" id="iRm-ch-ZEq"/>
+                        <constraint firstItem="B5X-PR-qwg" firstAttribute="leading" secondItem="hB5-vB-gMO" secondAttribute="leading" constant="40" id="jop-ZI-oDw"/>
+                        <constraint firstItem="v2E-TN-Tse" firstAttribute="centerY" secondItem="B5X-PR-qwg" secondAttribute="centerY" id="uS2-fw-txx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hB5-vB-gMO" secondAttribute="bottom" id="3xu-lV-FV9"/>
+                <constraint firstItem="hB5-vB-gMO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OSB-Eh-uyO"/>
+                <constraint firstItem="hB5-vB-gMO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XJd-j0-jq6"/>
+                <constraint firstAttribute="trailing" secondItem="hB5-vB-gMO" secondAttribute="trailing" id="Y43-Cb-ICH"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
